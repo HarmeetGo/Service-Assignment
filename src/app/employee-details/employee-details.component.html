@@ -1,0 +1,29 @@
+
+      <!-- <ul    *ngFor="let employee of employees "  > 
+         <li>
+             <h5>{{ employee.name }}</h5>
+              <p> {{ employee.id }}</p>
+        </li>
+    </ul> -->
+    <table >
+        <thead>
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Designation</th>
+                              
+            </tr>
+        </thead>
+        <tbody>
+            <tr  *ngFor="let employee of employees ; let id = index">
+                <td>{{ id+1 }}</td>
+                <td><button  (click)="onNameClick()">{{ employee.name }}</button></td>
+                <td>{{ employee.designation }}</td>
+               
+                
+            </tr>
+        </tbody>
+    </table>
+<a routerLink=''>Home</a>
+
+<!-- <button (click)="onReload()">Reload</button> -->

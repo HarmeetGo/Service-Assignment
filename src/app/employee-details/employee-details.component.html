@@ -17,7 +17,7 @@
         <tbody>
             <tr  *ngFor="let employee of employees ; let id = index">
                 <td>{{ id+1 }}</td>
-                <td><button  (click)="onNameClick()">{{ employee.name }}</button></td>
+                <td><button  [routerLink]="'/details/'+id+'/'+employee.name+'/'+employee.designation">{{ employee.name }}</button></td>
                 <td>{{ employee.designation }}</td>
                
                 

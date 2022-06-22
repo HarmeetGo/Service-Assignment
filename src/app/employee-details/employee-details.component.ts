@@ -9,7 +9,7 @@ import { DataService } from '../service/data.service';
 })
 export class EmployeeDetailsComponent implements OnInit {
  
-  employees:{name,designation}[]=[];
+  employees:{name:string,designation:string}[]=[];
   constructor(private dataService : DataService , private route : Router, private route2 : ActivatedRoute){}
   ngOnInit(){
    this.employees=this.dataService.Employees;
@@ -17,8 +17,5 @@ export class EmployeeDetailsComponent implements OnInit {
  onReload(){
   this.route.navigate(['/details'] , {relativeTo : this.route2}); 
  }
- onNameClick(){
-
-  this.route.navigate(['/employeeInfo']); 
- } 
+ 
 }

@@ -1,0 +1,6 @@
+<h1>Edit Information</h1>
+
+Name  : <input type="text"  placeholder="Change Name" #name><br >
+Designation : <input type="text"  #designation placeholder="Change Designation" >
+
+<button (click)="onSave(this.employee.id,name.value,designation.value)">Save</button>

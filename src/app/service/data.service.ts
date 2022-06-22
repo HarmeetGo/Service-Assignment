@@ -10,7 +10,13 @@ export class DataService{
         }
     ]
 
-    addEmployee(employee:{name,designation}){
+    addEmployee(employee:{name:string,designation:string}){
         this.Employees.push(employee);
     }
+
+    saveEmploye(newemployee:{index:number,Name:string,Des:string}){
+        this.Employees[newemployee.index].name=newemployee.Name;
+        this.Employees[newemployee.index].designation=newemployee.Des;
+    }
+    
 }

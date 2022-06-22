@@ -10,6 +10,7 @@ import { CompanyInfoComponent } from './company-info/company-info.component';
 import { DataService } from './service/data.service';
 
 import { EmployeeInfoComponent } from './employee-info/employee-info.component';
+import { EditInfoComponent } from './edit-info/edit-info.component';
 
 const appRoutes : Routes = [
 
@@ -23,7 +24,10 @@ const appRoutes : Routes = [
     path : 'companyInfo' ,component : CompanyInfoComponent
   },
   {
-    path: 'employeeInfo' ,component: EmployeeInfoComponent
+    path: 'details/:id/:name/:designation' ,component: EmployeeInfoComponent
+  },
+  {
+    path:'edit/:id/:name/:designation' , component: EditInfoComponent
   }
 ]
 
@@ -33,8 +37,8 @@ const appRoutes : Routes = [
     AddEmployeeComponent,
     EmployeeDetailsComponent,
     CompanyInfoComponent,
-   
-    EmployeeInfoComponent
+    EmployeeInfoComponent,
+    EditInfoComponent
   ],
   imports: [
     BrowserModule,
